@@ -5,9 +5,9 @@ import {
 
 export const siteConfig = {
   couple: {
-    bride: "Denise Biong", //Noenyl Bryle M. Gonzaga
+    bride: "Denise Allison Cada", //Noenyl Bryle M. Gonzaga
     brideNickname: "Denise", //Ltryl
-    groom: "Mark Allison Cada", //Ltryl B. Benitez
+    groom: "Mark Biong", //Ltryl B. Benitez
     groomNickname: "Mark",
     monogram:"/monogram/monogram-new.png" ,//Ltryl
     backgroundMusic:"/background_music/Panalangin (WITH TAB) Moonstar88  Fingerstyle Guitar Cover  Lyrics.mp3"
@@ -27,7 +27,7 @@ export const siteConfig = {
   wedding: {
     date: "August 26, 2026",
     time: "3:00 PM",
-    venue: "St. Anthony of Padua Parish Sulangan",
+    venue: "St. Anthony of Padua Parish",
     tagline: "are getting married!",
     theme: "Our wedding palette is inspired by timeless elegance and warmth.Motif Colors: Champagne Gold, Soft Beige, Warm Soft Brown",
     motif: "#BBCED5, #B9C3A8, #F3D8C5, #D1C4D4, #ECD8BA, #F4E8D8, #E1DCCF",
@@ -41,7 +41,7 @@ export const siteConfig = {
   details: {
     rsvp: {
       deadline: "August 1, 2026",
-      contact: "Denise Biong",
+      coordinator: "Trixie Castillo",
       phone: "0965 490 6240",
     },
   },
@@ -65,8 +65,8 @@ export const siteConfig = {
     }
   },
   ceremony: {
-    location: "St. Anthony of Padua Parish Sulangan",
-    venue: "Eastern Samar PH, Real St, Guiuan, 6809",
+    location: "St. Anthony of Padua Parish",
+    venue: "Sulangan, Guiuan, Eastern Samar",
     map: "https://maps.app.goo.gl/tcGfBAeEvJQ6pPzF7",
     date: "August 26, 2026",
     day: "Wednesday",
@@ -136,8 +136,9 @@ Now, as they prepare to say yes before God and the people they love most, Cather
     subtitle: "Songs that have been part of our journey together",
     playlistName: "Mia & Jov Wedding",
     embedUrl:
-      "https://open.spotify.com/embed/playlist/2DlYKMjLkwDT4HbXtzRMl0?utm_source=generator",
-    spotifyUrl: "https://open.spotify.com/playlist/2DlYKMjLkwDT4HbXtzRMl0",
+    //"https://open.spotify.com/embed/playlist/5Byw7lVriAOsOFOQ7A3hE6?utm_source=generator&si=2252feb4ea514014
+      "https://open.spotify.com/embed/playlist/5Byw7lVriAOsOFOQ7A3hE6?utm_source=generator&si=2252feb4ea514014",
+    spotifyUrl: "https://open.spotify.com/playlist/5Byw7lVriAOsOFOQ7A3hE6",
   },
   snapShare: {
     googleDriveLink:

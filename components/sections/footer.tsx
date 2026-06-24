@@ -14,9 +14,6 @@ import {
 
 const FOOTER_MONOGRAM_COLOR = "#94B8C8"
 
-const MONOGRAM_COLOR_FILTER =
-  `brightness(0) saturate(100%) invert(79%) sepia(11%) saturate(749%) hue-rotate(169deg) brightness(95%) contrast(89%) drop-shadow(0 4px 16px color-mix(in srgb, ${FOOTER_MONOGRAM_COLOR} 50%, transparent)) drop-shadow(0 10px 28px color-mix(in srgb, ${FOOTER_MONOGRAM_COLOR} 35%, transparent))`
-
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "600"],
@@ -216,27 +213,11 @@ export function Footer() {
             className="flex flex-col items-center"
           >
             <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72">
-              {/* Soft glow plate behind monogram */}
-              <div
-                className="pointer-events-none absolute inset-[-18%] rounded-full"
-                style={{
-                  background: `radial-gradient(circle at center, color-mix(in srgb, ${FOOTER_MONOGRAM_COLOR} 32%, transparent) 0%, color-mix(in srgb, ${FOOTER_MONOGRAM_COLOR} 14%, transparent) 48%, transparent 72%)`,
-                }}
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute inset-[-8%] rounded-full blur-2xl opacity-50"
-                style={{
-                  background: `radial-gradient(circle, color-mix(in srgb, ${FOOTER_MONOGRAM_COLOR} 28%, transparent) 0%, transparent 70%)`,
-                }}
-                aria-hidden
-              />
               <Image
                 src={siteConfig.couple.monogram}
                 alt={`${coupleDisplayName} monogram`}
                 fill
                 className="object-contain"
-                style={{ filter: MONOGRAM_COLOR_FILTER }}
                 priority={false}
                 sizes="(max-width: 640px) 176px, (max-width: 1024px) 256px, 288px"
               />

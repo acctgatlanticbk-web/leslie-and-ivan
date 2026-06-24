@@ -109,7 +109,7 @@ const attireGuide = {
     },
     gentlemen: {
       colors: ["#FAF6EE", "#E8DFC8", "#D4C4A8", "#A89070"] as const,
-      description: "Barong tagalog and pants.",
+      description: "Short/Long Sleeves Barong Tagalong and Pants.",
     },
   },
 } as const

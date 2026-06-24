@@ -148,8 +148,8 @@ export function Hero({ visible = false }: HeroProps) {
     transform: contentVisible ? "translateY(0)" : "translateY(16px)",
   })
 
-  const groomNickname = siteConfig.couple.groomNickname || siteConfig.couple.groom
-  const brideNickname = siteConfig.couple.brideNickname || siteConfig.couple.bride
+  const groomName = siteConfig.couple.groom
+  const brideName = siteConfig.couple.bride
 
   const ceremonyDate =
     siteConfig.ceremony.date ?? siteConfig.wedding.date ?? defaultSiteConfig.ceremony.date
@@ -246,7 +246,7 @@ export function Hero({ visible = false }: HeroProps) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[360px] flex-col items-center justify-center min-h-[100dvh] px-4 pb-8 pt-[calc(2.75rem+env(safe-area-inset-top,0px))] sm:max-w-[580px] sm:px-6 sm:pb-10 sm:pt-[calc(3rem+env(safe-area-inset-top,0px))] md:px-8 md:pt-[calc(3.25rem+env(safe-area-inset-top,0px))]">
         <div
-          className="w-full px-6 pt-4 pb-6 sm:px-8 sm:pt-5 sm:pb-7 md:px-10 md:pt-5 md:pb-8"
+          className="w-full px-6 py-8 sm:px-8 sm:py-9 md:px-10 md:py-10"
           style={{
             background: "rgba(255, 252, 248, 0.82)",
             backdropFilter: "blur(10px)",
@@ -258,18 +258,18 @@ export function Hero({ visible = false }: HeroProps) {
           }}
         >
         <div
-          className="mx-auto flex w-full max-w-[300px] flex-col items-center text-center sm:max-w-[440px] md:max-w-[480px]"
+          className="mx-auto flex w-full max-w-[320px] flex-col items-center gap-y-7 text-center sm:max-w-[460px] sm:gap-y-8 md:max-w-[500px] md:gap-y-9"
           style={{
             color: TEXT,
             WebkitFontSmoothing: "antialiased",
           }}
         >
           {/* SAVE THE DATE — arch */}
-          <div style={{ ...fade(0) }} className="mb-0.5 mt-7 w-full sm:mt-8 md:mb-0 md:mt-10">
-            <div>
+          <div style={{ ...fade(0) }} className="w-full mt-6 sm:mt-7 md:mt-8 -mb-3 sm:-mb-4">
+            <div className="leading-none">
             <svg
               viewBox="0 0 300 100"
-              className="mx-auto h-[66px] w-full md:hidden"
+              className="mx-auto block h-[58px] w-full md:hidden"
               aria-hidden
               overflow="visible"
             >
@@ -285,7 +285,7 @@ export function Hero({ visible = false }: HeroProps) {
 
             <svg
               viewBox="0 0 480 130"
-              className="mx-auto hidden h-[90px] w-full md:block"
+              className="mx-auto hidden h-[82px] w-full md:block"
               aria-hidden
               overflow="visible"
             >
@@ -302,47 +302,39 @@ export function Hero({ visible = false }: HeroProps) {
           </div>
 
           {/* Invitation copy */}
-          <div style={{ ...fade(100) }} className="mt-3 flex w-full flex-col items-center gap-2 md:mt-4">
-            <div className="flex w-full max-w-[280px] items-center justify-center gap-2 md:max-w-[320px]">
+          <div style={{ ...fade(100) }} className="flex w-full flex-col items-center">
+            <div className="flex w-full max-w-[320px] items-center justify-center gap-2 md:max-w-[420px]">
               <DottedRule compact />
               <p
-                className="shrink-0 text-[10px] tracking-[0.18em] uppercase md:text-[12px]"
-                style={{ ...labelSerif, color: TEXT_DEEP, opacity: 0.9 }}
+                className="shrink-0 text-[11px] leading-snug md:text-[13px]"
+                style={{ ...bodySerif, color: TEXT_DEEP, fontStyle: "italic" }}
               >
-                With joy in our hearts
+                With grateful hearts and the blessing of our families,
               </p>
               <DottedRule compact />
             </div>
-            <p
-              className="max-w-[280px] text-[13px] leading-[1.55] md:max-w-none md:text-[15px] md:leading-[1.6]"
-              style={{ ...bodySerif, color: TEXT, fontStyle: "italic" }}
-            >
-              we invite you to witness
-              <br className="md:hidden" />
-              {" "}the wedding of
-            </p>
           </div>
 
           {/* Couple names */}
-          <div style={{ ...fade(220) }} className="mt-6 flex w-full flex-col items-center gap-3 sm:mt-7 md:mt-8 md:gap-4">
+          <div style={{ ...fade(220) }} className="flex w-full flex-col items-center gap-5 sm:gap-6">
             <h1
-              className="w-full leading-[1.05]"
+              className="w-full px-1 leading-[1.2]"
               style={{
                 ...displayScript,
-                fontSize: "clamp(56px, 15vw, 80px)",
+                fontSize: "clamp(32px, 8.5vw, 46px)",
                 color: NAME_COLOR,
                 fontWeight: 400,
-                letterSpacing: "0.02em",
+                letterSpacing: "0.01em",
                 textShadow: NAME_SHADOW,
               }}
             >
-              {groomNickname}
+              {groomName}
             </h1>
 
-            <div className="flex w-full max-w-[220px] items-center justify-center gap-2 md:max-w-[280px] md:gap-3">
+            <div className="flex w-full max-w-[200px] items-center justify-center gap-2.5 md:max-w-[240px] md:gap-3">
               <DottedRule compact />
               <span
-                className="shrink-0 text-[13px] italic md:text-[16px]"
+                className="shrink-0 text-[12px] italic md:text-[14px]"
                 style={{ ...bodySerif, color: TEXT, fontStyle: "italic" }}
               >
                 and
@@ -351,36 +343,36 @@ export function Hero({ visible = false }: HeroProps) {
             </div>
 
             <h1
-              className="w-full leading-[1.05]"
+              className="w-full px-1 leading-[1.2]"
               style={{
                 ...displayScript,
-                fontSize: "clamp(56px, 15vw, 80px)",
+                fontSize: "clamp(32px, 8.5vw, 46px)",
                 color: NAME_COLOR,
                 fontWeight: 400,
-                letterSpacing: "0.02em",
+                letterSpacing: "0.01em",
                 textShadow: NAME_SHADOW,
               }}
             >
-              {brideNickname}
+              {brideName}
             </h1>
           </div>
 
-          {/* Together with their families */}
-          <div style={{ ...fade(520) }} className="mt-5 w-full md:mt-6">
-          <p
-            className="w-full text-[13px] leading-[1.65] md:text-[15px] md:leading-[1.75]"
-            style={{ ...bodySerif, color: TEXT }}
-          >
-            Together with their families
-            <br />
-            invite you to their wedding celebration
-          </p>
+          {/* Invitation body */}
+          <div style={{ ...fade(520) }} className="w-full">
+            <p
+              className="w-full text-[13px] leading-[1.75] md:text-[15px] md:leading-[1.85]"
+              style={{ ...bodySerif, color: TEXT, fontStyle: "italic" }}
+            >
+              joyfully invite you to share in the happiness of our wedding day as we promise a
+              lifetime of love, faith, and devotion before God and the people dearest to our hearts
+              in the Sacrament of Matrimony
+            </p>
           </div>
 
           {/* Date block */}
-          <div style={{ ...fade(620) }} className="mt-4 w-full md:mt-5">
+          <div style={{ ...fade(620) }} className="w-full">
             <div
-              className="mx-auto grid w-full max-w-[260px] gap-y-0 md:max-w-[340px]"
+              className="mx-auto grid w-full max-w-[300px] gap-y-0 md:max-w-[400px]"
               style={{
                 gridTemplateColumns: "1fr auto 1fr",
                 gridTemplateRows: "auto auto auto",
@@ -429,7 +421,7 @@ export function Hero({ visible = false }: HeroProps) {
               <div className="col-start-3 row-start-2 flex flex-col justify-center gap-[2px] px-0.5 md:px-1">
                 <div className="border-t border-dotted" style={{ borderColor: TEXT_DEEP }} />
                 <span
-                  className="whitespace-nowrap text-center text-[10px] tracking-[0.12em] uppercase md:text-[12px]"
+                  className="mx-auto max-w-[5.75rem] text-center text-[10px] leading-[1.4] tracking-[0.14em] uppercase md:max-w-[7.25rem] md:text-[12px]"
                   style={{ ...labelSerif, color: TEXT_DEEP }}
                 >
                   At {ceremonyTime}
@@ -452,7 +444,7 @@ export function Hero({ visible = false }: HeroProps) {
           </div>
 
           {/* at / venue */}
-          <div style={{ ...fade(720) }} className="mt-4 flex w-full flex-col items-center md:mt-5">
+          <div style={{ ...fade(720) }} className="flex w-full flex-col items-center">
             <div className="flex items-center justify-center gap-1.5 md:gap-2">
               <DottedRule compact />
               <span
@@ -464,25 +456,57 @@ export function Hero({ visible = false }: HeroProps) {
               <DottedRule compact />
             </div>
             <p
-              className="mt-2 text-[14px] leading-snug md:mt-2.5 md:text-[16px]"
-              style={{ ...bodySerif, color: TEXT }}
+              className="mt-3 text-[13px] leading-relaxed tracking-[0.1em] uppercase md:mt-3.5 md:text-[15px]"
+              style={{ ...labelSerif, color: TEXT_DEEP, fontWeight: 600 }}
             >
               {siteConfig.ceremony.location}
+            </p>
+            <p
+              className="mt-1.5 text-[13px] leading-relaxed md:text-[15px]"
+              style={{ ...bodySerif, color: TEXT }}
+            >
+              {siteConfig.ceremony.venue}
             </p>
           </div>
 
           {/* Call-to-action */}
-          <div style={{ ...fade(840) }} className="mt-6 flex w-full flex-col items-center gap-3 px-1 sm:gap-4 md:mt-7">
+          <div style={{ ...fade(840) }} className="flex w-full flex-col items-center gap-5 px-1 sm:gap-6">
             <p
-              className="text-[13px] leading-relaxed md:text-[15px]"
-              style={{ ...bodySerif, color: TEXT }}
+              className="text-[13px] leading-[1.75] md:text-[15px] md:leading-[1.85]"
+              style={{ ...bodySerif, color: TEXT, fontStyle: "italic" }}
             >
-              Your presence, prayers, and love will mean the world to us.
+              As we begin this beautiful new chapter together, your presence, prayers, and love
+              would mean so much to us.
             </p>
+
+            <div className="flex w-full flex-col items-center gap-2.5 pt-1 sm:gap-3">
+              <div className="flex w-full max-w-[280px] items-center justify-center gap-2 md:max-w-[340px] md:gap-2.5">
+                <DottedRule compact />
+                <span
+                  className="shrink-0 text-[10px] tracking-[0.16em] uppercase md:text-[12px]"
+                  style={{ ...labelSerif, color: TEXT_DEEP, fontWeight: 600 }}
+                >
+                  Reception to follow
+                </span>
+                <DottedRule compact />
+              </div>
+              <p
+                className="text-[13px] leading-relaxed tracking-[0.1em] uppercase md:text-[15px]"
+                style={{ ...labelSerif, color: TEXT_DEEP, fontWeight: 600 }}
+              >
+                {siteConfig.reception.location}
+              </p>
+              <p
+                className="text-[13px] leading-relaxed md:text-[15px]"
+                style={{ ...bodySerif, color: TEXT }}
+              >
+                {siteConfig.reception.venue?.trim()}
+              </p>
+            </div>
 
             <a
               href="#guest-list"
-              className="group relative w-full sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#AFC8E6]/50"
+              className="group relative mt-1 w-full sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#AFC8E6]/50"
               style={{
                 backgroundColor: NAME_COLOR,
                 boxShadow: "0 10px 24px rgba(106, 155, 184, 0.28)",

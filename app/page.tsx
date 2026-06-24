@@ -99,15 +99,17 @@ export default function Home() {
               <Details />
               <Accommodation />
               {/* <GuestInformation /> */}
-              <WeddingPlaylist />
+
               <Entourage />
               <GuestList />
               <BookOfGuests />
-              <WeddingTimeline />
+              {/* <WeddingTimeline /> */}
               {/* <PrincipalSponsors /> */}
+              <WeddingPlaylist />
               <FAQ />
+              
               <Registry />
-              <SnapShare />
+              {/* <SnapShare /> */}
 
               <Footer />
             </div>

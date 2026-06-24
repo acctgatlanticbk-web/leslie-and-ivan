@@ -90,75 +90,7 @@ would be most appreciated
           </div>
         </div>
 
-        {/* QR card */}
-        <div
-          className="relative max-w-xl mx-auto rounded-xl sm:rounded-2xl border backdrop-blur-md px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10"
-          style={cardStyle}
-        >
-          <div className="flex flex-col items-center gap-4 sm:gap-6">
-            <div
-              className="inline-flex rounded-full p-1"
-              style={{
-                border: `1px solid color-mix(in srgb, ${coastalPalette.blueGray} 40%, white)`,
-                backgroundColor: `color-mix(in srgb, white 55%, transparent)`,
-              }}
-            >
-              {gcashQr.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setActiveQr(item.id)}
-                  className={`${cinzel.className} px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.1em] transition-all duration-200`}
-                  style={
-                    activeQr === item.id
-                      ? {
-                          backgroundColor: coastalPalette.teal,
-                          color: coastalPalette.cream,
-                        }
-                      : {
-                          color: coastalPalette.deep,
-                        }
-                  }
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div
-                className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-xl overflow-hidden"
-                style={{
-                  backgroundColor: "white",
-                  boxShadow: `0 8px 24px color-mix(in srgb, ${coastalPalette.teal} 12%, transparent)`,
-                  border: `1px solid color-mix(in srgb, ${coastalPalette.blueGray} 35%, white)`,
-                }}
-              >
-                <Image
-                  src={activeItem.src}
-                  alt={`QR code - ${activeItem.label}`}
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 288px"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4 w-full max-w-md text-center">
-                <p
-                  className={`${cinzel.className} ${ct.label} tracking-[0.18em] uppercase`}
-                  style={{ color: coastalPalette.dustyRose }}
-                >
-                  Account Number
-                </p>
-                <p
-                  className={`${cinzel.className} mt-1 text-sm sm:text-base font-semibold`}
-                  style={{ color: coastalPalette.deep }}
-                >
-                  {activeItem.accountNumber}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    
 
         <div className="text-center mt-6 sm:mt-8 space-y-2">
           <p className={ct.body} style={{ ...bodyFont, color: OUTSIDE_TEXT_MUTED }}>

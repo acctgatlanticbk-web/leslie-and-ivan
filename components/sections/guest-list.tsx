@@ -421,11 +421,14 @@ export function GuestList() {
         If we do not receive your response by the deadline, we will assume you are unable to attend.
 Thank you for your love and support. We truly look forward to celebrating this special day with you.
         </p>
-        {/* <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+        <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           Phone: {siteConfig.details.rsvp.phone}
-        </p> */}
+        </p>
         <p className={`${cormorant.className} text-sm sm:text-base md:text-lg lg:text-xl text-white font-bold max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           RSVP Deadline: {siteConfig.details.rsvp.deadline}
+        </p>
+        <p className={`${cormorant.className} text-sm sm:text-base md:text-lg lg:text-xl text-white font-bold max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+          Coordinator: {siteConfig.details.rsvp.coordinator}
         </p>
         
         {/* Decorative element below subtitle */}

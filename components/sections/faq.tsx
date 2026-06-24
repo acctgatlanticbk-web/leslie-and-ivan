@@ -97,18 +97,20 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
           {siteConfig.details.rsvp.deadline.replace(/\.\s*$/, "")}.
           {"\n"}
           If you have questions, message{" "}
+
+          or coordinator : {siteConfig.details.rsvp.coordinator} : {siteConfig.details.rsvp.phone} .
           <a
-            href="https://www.facebook.com/elyzha.david"
+            href="https://www.facebook.com/d.allison.CADA"
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
             style={{ color: palette.accent }}
           >
-            {siteConfig.details.rsvp.contact}
+            {siteConfig.details.rsvp.coordinator}
           </a>{" "}
           or{" "}
           <a
-            href="https://www.facebook.com/KennethJunCajayon"
+            href="https://www.facebook.com/${siteConfig.couple.groom}"
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
@@ -156,11 +158,11 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
       answer:
         "Yes, parking is available at the venue, and parking attendants, along with our coordinators, will assist you on the day.",
     },
-    {
-      question: "Will there be a wedding gift registry?",
-      answer:
-        "With all that we have, we are truly blessed. Your presence and prayers are what we request most. However, if you desire to give nonetheless, a monetary gift to help us begin our new life together would be humbly appreciated. You can find our gift registry information in the Gift Guide section.",
-    },
+    // {
+    //   question: "Will there be a wedding gift registry?",
+    //   answer:
+    //     "With all that we have, we are truly blessed. Your presence and prayers are what we request most. However, if you desire to give nonetheless, a monetary gift to help us begin our new life together would be humbly appreciated. You can find our gift registry information in the Gift Guide section.",
+    // },
     {
       question: "Unplugged Ceremony",
       answer:
