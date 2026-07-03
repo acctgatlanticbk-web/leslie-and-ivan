@@ -228,11 +228,11 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
     //   answer:
     //     "EYES UP, PHONES DOWN, HEARTS OPEN.\n\nThe greatest gift you can give us during our ceremony is your presence. We respectfully request that guests refrain from taking photos or videos during the ceremony so our official photographers can capture every moment without distraction. We promise to share the beautiful photos with you afterward!\n\nOur professional photographers will be capturing every beautiful memory, and we promise to share the photos with everyone afterwards.",
     // },
-    {
-      question: "Can I take photos or videos during the reception?",
-      answer:
-        "Yes! While our I DO's will be unplugged, our reception will not be. As a couple who loves photos and memories, we would love for you to capture the fun moments throughout the evening. We prepared this celebration wholeheartedly and we want everyone to enjoy it fully.",
-    },
+    // {
+    //   question: "Can I take photos or videos during the reception?",
+    //   answer:
+    //     "Yes! While our I DO's will be unplugged, our reception will not be. As a couple who loves photos and memories, we would love for you to capture the fun moments throughout the evening. We prepared this celebration wholeheartedly and we want everyone to enjoy it fully.",
+    // },
     {
       question: "When is the appropriate time to leave?",
       answer:

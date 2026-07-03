@@ -94,7 +94,7 @@ export default function Home() {
               <LoveStory />
               <Countdown />
               <Gallery />
-              <VideoMessage />
+              {/* <VideoMessage /> */}
               <Messages />
               <Details />
               {/* <Accommodation /> */}

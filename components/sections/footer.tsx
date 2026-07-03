@@ -412,7 +412,6 @@ export function Footer() {
                       { href: "https://www.facebook.com", Icon: Facebook, label: "Facebook" },
                       { href: "https://www.instagram.com/", Icon: Instagram, label: "Instagram" },
                       { href: "https://www.youtube.com", Icon: Music2, label: "YouTube" },
-                      { href: "https://x.com/", Icon: Twitter, label: "Twitter" },
                     ] as const
                   ).map(({ href, Icon, label }) => (
                     <a

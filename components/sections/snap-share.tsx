@@ -406,7 +406,7 @@ export function SnapShare() {
               </p>
             </ContentCard>
 
-            <ContentCard>
+            {/* <ContentCard>
               <h5
                 className={`${cinzel.className} ${ct.body} text-center font-semibold uppercase tracking-[0.1em]`}
                 style={{ color: palette.heading }}
@@ -466,7 +466,7 @@ export function SnapShare() {
                   {copiedAllHashtags ? "All Copied!" : "Copy All"}
                 </span>
               </button>
-            </ContentCard>
+            </ContentCard> */}
 
             <ContentCard>
               <h5
@@ -488,7 +488,6 @@ export function SnapShare() {
                     { platform: "instagram" as const, Icon: Instagram, label: "Instagram" },
                     { platform: "facebook" as const, Icon: Facebook, label: "Facebook" },
                     { platform: "tiktok" as const, Icon: Share2, label: "TikTok" },
-                    { platform: "twitter" as const, Icon: Twitter, label: "Twitter" },
                   ] as const
                 ).map(({ platform, Icon, label }) => (
                   <button

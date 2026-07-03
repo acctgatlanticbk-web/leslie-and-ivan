@@ -154,7 +154,7 @@ const attireGuide = {
     imageAspect: "669/373",
     ladies: {
       colors: ["#E66318"] as const,
-      description: "Orange Silk",
+      description: "Orange",
     },
     gentlemen: {
       colors: ["#B7A78F"] as const,
@@ -178,7 +178,7 @@ const attireGuide = {
     imageAspect: "677/369",
     ladies: {
       colors: ["#FDCD7A"] as const,
-      description: "Marigold silk-satin",
+      description: "Marigold",
     },
     gentlemen: {
       colors: ["#E7DECA", "#C7B7A1"] as const,
@@ -802,12 +802,12 @@ export function Details() {
           >
             <div className="grid grid-cols-1 gap-5 sm:gap-6">
               <AttirePaletteGroup
-                label="Ladies"
+                label="Mother of Bride & Groom"
                 colors={attireGuide.sponsors.ladies.colors}
                 description={attireGuide.sponsors.ladies.description}
               />
               <AttirePaletteGroup
-                label="Gentlemen"
+                label="Father of Bride & Groom"
                 colors={attireGuide.sponsors.gentlemen.colors}
                 description={attireGuide.sponsors.gentlemen.description}
               />

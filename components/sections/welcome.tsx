@@ -222,7 +222,7 @@ export function Welcome() {
               {/* <OrnamentalDivider compact /> */}
 
               {/* Hashtag */}
-              <aside
+              {/* <aside
                 className="rounded-md border px-4 py-3.5 sm:rounded-lg sm:px-5 sm:py-4"
                 style={{
                   background: "var(--color-welcome-bg-soft)",
@@ -246,7 +246,7 @@ export function Welcome() {
                     {siteConfig.snapShare.hashtag.join(" ")}
                   </p>
                 </div>
-              </aside>
+              </aside> */}
 
               {/* Sign-off */}
               <footer className="space-y-2 px-1 pt-4 pb-2 sm:space-y-2.5 sm:px-2 sm:pt-5 sm:pb-3 md:pt-6 md:pb-4">

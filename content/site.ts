@@ -10,7 +10,7 @@ export const siteConfig = {
     groom: "Dean Jay Belwa Balcanao", //Ltryl B. Benitez
     groomNickname: "Dean",
     monogram:"/monogram/new-monogram.png" ,//Ltryl
-    backgroundMusic:"/background_music/Taylor Swift - Labyrinth (Official HD Audio) (mp3cut.net).mp3"
+    backgroundMusic:"/background_music/The Only One.mp3"
   },
   googleAPI:{
     messageForm: "https://docs.google.com/forms/d/e/1FAIpQLSeA2Vr4PgwxPNpS7HNbyivgnrRYRw33NV8RU313Ch88ERy4mg/formResponse",   //done
@@ -26,7 +26,7 @@ export const siteConfig = {
   },
   wedding: {
     date: "December 7, 2026",
-    time: "1:00 PM",
+    time: "2:00 PM",
     venue: "Chapel of the Mountains, Itogon Mountain Village",
     tagline: "are getting married!",
     theme: "Our wedding palette is inspired by timeless elegance and warmth.Motif Colors: Champagne Gold, Soft Beige, Warm Soft Brown",
@@ -53,16 +53,22 @@ export const siteConfig = {
   giftRegistry: {
     QR_1:{
     id: "AUB Bank",
-    src: "public/QR/AUB Bank.png",
+    src: "/QR/AUB Bank.png",
     label: "AUB Bank",
     accountNumber: "DYANDJ : xxxxxxxxx938",
     },
-    // QR_2:{
-    // id: "Zelle",
-    // src: "/QR/pleaseProvideQR.png",
-    // label: "Zelle",
-    // accountNumber: "Please Provide QR",
-    // }
+    QR_2:{
+    id: "GCash1",
+    src: "/QR/Gcash1.png",
+    label: "GCash",
+    accountNumber: "AL****A DY*N M. : 0905229****",
+    },
+    QR_3:{
+    id: "GCash2",
+    src: "/QR/Gcash2.png",
+    label: "GCash",
+    accountNumber: "DE*N J** B. : 0915434****",
+    }
   },
   ceremony: {
     location: "Chapel of the Mountains, Itogon Mountain Village",
@@ -70,7 +76,7 @@ export const siteConfig = {
     map: "https://maps.app.goo.gl/i5MoJL8H9zTG2Jyq5",
     date: "December 7, 2026",
     day: "Monday",
-    time: "1:00 PM",
+    time: "2:00 PM",
     entourageTime: "11:00 AM",
     guestsTime: "11:30 AM",
     image: ["/Details/Chapel of the Mountains Itogon (2).jpg"],
