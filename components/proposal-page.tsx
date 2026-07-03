@@ -151,7 +151,7 @@ function LayeredProposalTitle({
         style={{
           marginTop: "var(--script-overlap)",
           fontSize: "var(--script-size)",
-          color: palette.accent,
+          color: "#E66318",
           textShadow: NAME_SHADOW,
         }}
       >
@@ -213,17 +213,21 @@ function CoupleNameImage({
 }) {
   return (
     <div
-      className={`relative mx-auto aspect-[528/473] w-full max-w-[min(88vw,18rem)] sm:max-w-xs md:max-w-sm ${className}`}
-    >
-      <Image
-        src="/Details/couplename.png"
-        alt={`${groom} and ${bride}`}
-        fill
-        className="object-contain drop-shadow-[0_10px_28px_rgba(45,67,79,0.14)]"
-        sizes="(max-width: 640px) 88vw, 320px"
-        priority
-      />
-    </div>
+      role="img"
+      aria-label={`${groom} and ${bride}`}
+      className={`relative mx-auto aspect-[528/473] w-full max-w-[min(88vw,18rem)] sm:max-w-xs md:max-w-sm drop-shadow-[0_10px_28px_rgba(45,67,79,0.14)] ${className}`}
+      style={{
+        backgroundColor: "#E66318",
+        WebkitMaskImage: "url(/Details/coupleName.png)",
+        maskImage: "url(/Details/coupleName.png)",
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+      }}
+    />
   )
 }
 
@@ -254,26 +258,26 @@ function ProposalCard({ children, className = "" }: { children: ReactNode; class
           className="relative overflow-hidden rounded-xl border backdrop-blur-xl sm:rounded-2xl sm:backdrop-blur-2xl"
           style={cardStyle}
         >
-          <div className="pointer-events-none absolute left-0 top-0 z-10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+          {/* <div className="pointer-events-none absolute left-0 top-0 z-10">
+          
             <img
-              src="/decoration/decoration/left-top-decoration.png"
+              src="/decoration/deco/top-left-corner-deco.png"
               alt=""
               className={CORNER_DECO_CLASS}
             />
-          </div>
-          <div className="pointer-events-none absolute right-0 top-0 z-10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+          </div> */}
+          {/* <div className="pointer-events-none absolute right-0 top-0 z-10">
+          
             <img
-              src="/decoration/decoration/right-top-decoration.png"
+              src="/decoration/deco/top-right-corner-deco.png"
               alt=""
               className={CORNER_DECO_CLASS}
             />
-          </div>
+          </div> */}
           <div className="pointer-events-none absolute bottom-0 left-0 z-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/decoration/decoration/left-bottom-decoration%20(2).png"
+              src="/decoration/deco/bottom-left-corner-deco.png"
               alt=""
               className={CORNER_DECO_CLASS}
             />
@@ -281,7 +285,7 @@ function ProposalCard({ children, className = "" }: { children: ReactNode; class
           <div className="pointer-events-none absolute bottom-0 right-0 z-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/decoration/decoration/right-bottom-decoration%20(2).png"
+              src="/decoration/deco/bottom-right-corner-deco.png"
               alt=""
               className={CORNER_DECO_CLASS}
             />
@@ -532,7 +536,7 @@ function ProposalAskSection({
               style={{ shapeOutside: "margin-box" }}
             >
               <Image
-                src="/Details/sponsors.png"
+                src="/Details/ourguest.png"
                 alt=""
                 fill
                 className="object-contain object-bottom drop-shadow-[0_20px_48px_rgba(42,37,32,0.12)]"
@@ -588,7 +592,7 @@ function ProposalAskSection({
               style={questionHeight ? { minHeight: "var(--ask-image-h)" } : undefined}
             >
               <Image
-                src="/Details/guest.png"
+                src="/Details/ourguest.png"
                 alt=""
                 fill
                 className="object-contain object-bottom drop-shadow-[0_20px_48px_rgba(42,37,32,0.12)]"
@@ -713,7 +717,7 @@ export function ProposalPage({ role }: ProposalPageProps) {
       {process.env.NEXT_PUBLIC_ENABLE_DECOR !== "false" && (
         <div className="pointer-events-none fixed inset-0 z-0" aria-hidden>
           <Suspense fallback={<div className="h-full w-full bg-gradient-to-b from-primary/10 to-secondary/5" />}>
-            <Silk speed={5} scale={1.1} color="#94B8C8" noiseIntensity={0.8} rotation={0.3} />
+            <Silk speed={5} scale={1.1} color="#E66318" noiseIntensity={0.8} rotation={0.3} />
           </Suspense>
         </div>
       )}
