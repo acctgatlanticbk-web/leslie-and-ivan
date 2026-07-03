@@ -190,11 +190,11 @@ const attireGuide = {
     imageAspect: "677/369",
     ladies: {
       colors: ["#630B18", "#441218", "#493326"] as const,
-      description: "Burgundy, Maroon, Dark Brown (chocolate silk)",
+      description: "Burgundy, Maroon, Dark Brown",
     },
     gentlemen: {
       colors: ["#630B18", "#441218", "#493326"] as const,
-      description: "Burgundy, Maroon, Dark Brown (chocolate silk)",
+      description: "Burgundy, Maroon, Dark Brown",
     },
   },
 } as const
@@ -895,92 +895,7 @@ export function Details() {
         </div> */}
 
         {/* Gentle Reminders */}
-        <div className="relative max-w-4xl mx-auto px-3 sm:px-5 mt-8 sm:mt-12 md:mt-16 pb-2 sm:pb-3">
-          <div
-            className="relative overflow-hidden rounded-xl sm:rounded-2xl border backdrop-blur-lg"
-            style={cardStyle}
-          >
-          {/* Content */}
-          <div className="relative z-10 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
-            {/* Animated couple photos carousel */}
-            <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8">
-              {coupleImages.map((image, index) => {
-                const isActive = index === currentImageIndex
-                // Alternate rotation: -5deg, 5deg, -3deg, 3deg for variety
-                const baseRotation = index === 0 ? -5 : index === 1 ? 5 : index === 2 ? -3 : 3
-                // Add gentle rotation animation for active image
-                const currentRotation = isActive 
-                  ? baseRotation + Math.sin(rotationOffset * Math.PI / 180) * 2 
-                  : baseRotation
-                
-                return (
-                  <div
-                    key={index}
-                    className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 shadow-lg transition-all duration-700 ease-in-out ${
-                      isActive ? 'scale-110 z-10' : 'scale-100 opacity-70'
-                    }`}
-                    style={{
-                      transform: `rotate(${currentRotation}deg) ${isActive ? "scale(1.1)" : "scale(1)"}`,
-                      borderColor: "color-mix(in srgb, var(--color-motif-deep) 20%, transparent)",
-                    }}
-                  >
-                    <Image
-                      src={image}
-                      alt={`Wedding couple ${index + 1}`}
-                      fill
-                      className={`object-cover transition-opacity duration-500 ${
-                        isActive ? 'opacity-100' : 'opacity-70'
-                      }`}
-                      sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
-                    />
-                  </div>
-                )
-              })}
-            </div>
-
-            {/* Title */}
-            <h3
-              className={`${cinzel.className} ${ct.noteTitle} mb-6 text-center font-semibold tracking-[0.14em] sm:mb-8`}
-              style={{ color: "var(--color-welcome-navy)" }}
-            >
-              GENTLE REMINDERS
-            </h3>
-
-            {/* Reminders List */}
-            <div className="space-y-4 sm:space-y-5 md:space-y-6 max-w-2xl mx-auto">
-               {/* No Kinds */}
-               {/* <div className="bg-motif-cream/60 rounded-lg p-4 sm:p-5 md:p-6 border border-motif-deep/10 shadow-sm">
-                <h4 className={`${cinzel.className} ${ct.reminderHead} font-semibold mb-2 sm:mb-3`} style={{ color: detailText.heading }}>
-                Adults-Only Celebration
-                </h4>
-                <p className={`${cormorant.className} ${ct.reminderBody} leading-relaxed`} style={{ ...bodyFont, color: detailText.body }}>
-                We kindly request that our wedding be an adults-only occasion. We hope this allows everyone to relax and fully enjoy the celebration with us.
-                </p>
-              </div> */}
-              {/* Unplugged Ceremony Reminder */}
-              <div className="rounded-lg border p-4 shadow-sm sm:p-5 md:p-6" style={softPanelStyle}>
-                <h4 className={`${cinzel.className} ${ct.reminderHead} mb-2 font-semibold sm:mb-3`} style={{ color: detailText.heading }}>
-                Unplugged Ceremony
-
-                </h4>
-                <p className={`font-goudy-italic ${ct.reminderBody} leading-relaxed`} style={{ color: detailText.body }}>
-                We&apos;re having a mostly unplugged ceremony. Guests may take photos, but we kindly ask that it be kept minimal. Please avoid blocking or crowding our official photographers so they can capture the special moments. We&apos;d love for everyone to stay present and share the moment with us. Don&apos;t worry—professional photos will be shared with you after the event. Thank you for your understanding 
-                </p>
-              </div>
-
-              {/* Arrival Reminder */}
-              {/* <div className="bg-motif-cream/60 rounded-lg p-4 sm:p-5 md:p-6 border border-motif-deep/10 shadow-sm">
-                <h4 className={`${cinzel.className} ${ct.reminderHead} font-semibold mb-2 sm:mb-3`} style={{ color: detailText.heading }}>
-                Arrival
-                </h4>
-                <p className={`${cormorant.className} ${ct.reminderBody} leading-relaxed`} style={{ ...bodyFont, color: detailText.body }}>
-                To ensure everything runs smoothly, please arrive at least 30 minutes before the ceremony starts. The program will begin at {siteConfig.ceremony.time}, so we kindly ask everyone to arrive by {siteConfig.ceremony.guestsTime} minutes. This will give you time to find your seat, take in the beautiful setup, and be fully present for our special moment
-                </p>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
+        
 
       {/* Enhanced Image Modal */}
       {showImageModal && (

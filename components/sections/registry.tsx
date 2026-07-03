@@ -40,6 +40,30 @@ const ct = {
   label: "text-[11px] sm:text-xs md:text-sm",
 } as const
 
+const UNAVAILABLE_QR_PATTERN = /pleaseProvideQR|please provide/i
+
+type RegistryItem = {
+  id: string
+  src: string
+  label: string
+  accountNumber?: string
+}
+
+function isAvailableRegistryItem(item: RegistryItem) {
+  if (!item.src?.trim()) return false
+  if (UNAVAILABLE_QR_PATTERN.test(item.src)) return false
+  if (item.accountNumber && UNAVAILABLE_QR_PATTERN.test(item.accountNumber)) {
+    return false
+  }
+  return true
+}
+
+function normalizeQrSrc(src: string) {
+  const trimmed = src.trim()
+  if (trimmed.startsWith("/")) return trimmed
+  return `/${trimmed.replace(/^public\/?/, "")}`
+}
+
 function OutsideDivider() {
   return (
     <div className="flex items-center justify-center gap-1.5">
@@ -97,7 +121,10 @@ function RegistryTitle() {
 
 export function Registry() {
   const siteConfig = useSiteConfig()
-  const registryItems = Object.values(siteConfig.giftRegistry ?? {})
+  const registryItems = Object.values(siteConfig.giftRegistry ?? {}).filter(
+    isAvailableRegistryItem
+  )
+  const hasMultipleQrs = registryItems.length > 1
   const [activeQr, setActiveQr] = useState(registryItems[0]?.id ?? "")
   const activeItem = registryItems.find((item) => item.id === activeQr) ?? registryItems[0]
   const { brideNickname, groomNickname } = siteConfig.couple
@@ -126,9 +153,9 @@ export function Registry() {
           </div>
         </div>
 
-        {registryItems.length > 0 && activeItem && (
+        {activeItem && (
           <div className="mt-6 text-center sm:mt-8 md:mt-10">
-            {registryItems.length > 1 && (
+            {hasMultipleQrs && (
               <div className="mb-5 flex flex-wrap items-center justify-center gap-2 sm:mb-6">
                 {registryItems.map((item) => {
                   const isActive = item.id === activeQr
@@ -160,17 +187,19 @@ export function Registry() {
               </div>
             )}
 
-            <p
-              className={`${cinzel.className} ${ct.label} mb-4 font-semibold uppercase tracking-[0.18em] sm:mb-5`}
-              style={{ color: OUTSIDE_TEXT, textShadow: READABLE_SHADOW }}
-            >
-              {activeItem.label}
-            </p>
+            {hasMultipleQrs && (
+              <p
+                className={`${cinzel.className} ${ct.label} mb-4 font-semibold uppercase tracking-[0.18em] sm:mb-5`}
+                style={{ color: OUTSIDE_TEXT, textShadow: READABLE_SHADOW }}
+              >
+                {activeItem.label}
+              </p>
+            )}
 
             <div className="mx-auto mb-4 inline-flex sm:mb-5">
               <div className="relative h-44 w-44 sm:h-52 sm:w-52 md:h-56 md:w-56">
                 <Image
-                  src={activeItem.src}
+                  src={normalizeQrSrc(activeItem.src)}
                   alt={`${activeItem.label} QR code`}
                   fill
                   className="rounded-lg object-contain"

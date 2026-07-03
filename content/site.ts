@@ -52,17 +52,17 @@ export const siteConfig = {
   },
   giftRegistry: {
     QR_1:{
-    id: "BPI",
-    src: "/QR/pleaseProvideQR.png",
-    label: "BPI",
-    accountNumber: "Please Provide QR",
+    id: "AUB Bank",
+    src: "public/QR/AUB Bank.png",
+    label: "AUB Bank",
+    accountNumber: "DYANDJ : xxxxxxxxx938",
     },
-    QR_2:{
-    id: "Zelle",
-    src: "/QR/pleaseProvideQR.png",
-    label: "Zelle",
-    accountNumber: "Please Provide QR",
-    }
+    // QR_2:{
+    // id: "Zelle",
+    // src: "/QR/pleaseProvideQR.png",
+    // label: "Zelle",
+    // accountNumber: "Please Provide QR",
+    // }
   },
   ceremony: {
     location: "Chapel of the Mountains, Itogon Mountain Village",
