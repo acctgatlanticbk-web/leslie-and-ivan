@@ -226,7 +226,7 @@ export function Footer() {
         <div className="pointer-events-none absolute left-0 top-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/decoration/left-top-decoration.png"
+            src="/decoration/deco/top-left-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -234,7 +234,7 @@ export function Footer() {
         <div className="pointer-events-none absolute right-0 top-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/decoration/right-top-decoration.png"
+            src="/decoration/deco/top-right-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -242,7 +242,7 @@ export function Footer() {
         <div className="pointer-events-none absolute bottom-0 left-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/decoration/left-bottom-decoration%20(2).png"
+            src="/decoration/deco/bottom-left-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -250,7 +250,7 @@ export function Footer() {
         <div className="pointer-events-none absolute bottom-0 right-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/decoration/right-bottom-decoration%20(2).png"
+            src="/decoration/deco/bottom-right-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -277,13 +277,13 @@ export function Footer() {
           </motion.div>
 
           <div className="mt-4 max-w-md text-center sm:mt-5 md:mt-6">
-            {/* <FooterCoupleNames groom={groomName} bride={brideName} /> */}
-            {/* <p
+            <FooterCoupleNames groom={groomName} bride={brideName} />
+            <p
               className="font-goudy-italic mt-2 text-[0.75rem] leading-[1.62] sm:mt-3 sm:text-[0.8125rem] md:text-[0.84375rem]"
               style={{ color: "var(--color-welcome-text)" }}
             >
               {ceremonyDate}
-            </p> */}
+            </p>
           </div>
 
           <div className="flex items-center justify-center pt-3 sm:pt-4">
@@ -353,7 +353,7 @@ export function Footer() {
                   className={`${cinzel.className} ${ct.cardTitle} font-semibold mb-3`}
                   style={{ color: palette.heading }}
                 >
-                  Ceremony & Reception
+                  Ceremony
                 </h4>
                 <div className="space-y-3">
                   <DetailRow label="Venue" value={toTitleCase(ceremonyVenue)} />
@@ -364,7 +364,7 @@ export function Footer() {
                 </div>
               </FooterCard>
 
-              {/* <FooterCard>
+              <FooterCard>
                 <h4
                   className={`${cinzel.className} ${ct.cardTitle} font-semibold mb-3`}
                   style={{ color: palette.heading }}
@@ -378,7 +378,7 @@ export function Footer() {
                   )}
                   <DetailRow label="Time" value={receptionTime} />
                 </div>
-              </FooterCard> */}
+              </FooterCard>
 
               <FooterCard>
                 <h4 className={`${cinzel.className} ${ct.cardTitle} font-semibold mb-3`} style={{ color: palette.heading }}>

@@ -134,11 +134,11 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   playlist: {
     title: "A Playlist from our hearts",
     subtitle: "Songs that have been part of our journey together",
-    playlistName: "Kath & Jopert Wedding",
+    playlistName: "Dean and Alyanna Wedding",
     embedUrl:
     //"https://open.spotify.com/embed/playlist/4fr1yyG0dA8rAnhYTQxECe?utm_source=generator&si=32898d38071f43ba
-      "https://open.spotify.com/embed/playlist/4fr1yyG0dA8rAnhYTQxECe?utm_source=generator&si=32898d38071f43ba",
-    spotifyUrl: "https://open.spotify.com/playlist/4fr1yyG0dA8rAnhYTQxECe",
+      "https://open.spotify.com/embed/playlist/2wZOUW7A6YLDKOREccGGiP",
+    spotifyUrl: "https://open.spotify.com/embed/playlist/2wZOUW7A6YLDKOREccGGiP",
   },
   snapShare: {
     googleDriveLink:

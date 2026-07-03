@@ -65,7 +65,7 @@ const cardStyle = {
     "0 8px 28px color-mix(in srgb, var(--color-motif-deep) 7%, transparent), inset 0 1px 0 color-mix(in srgb, white 70%, transparent)",
 } as const
 
-const QR_FG = "#1a1a1a"
+const QR_FG = "#E66318"
 
 function OutsideDivider() {
   return (
@@ -332,7 +332,7 @@ export function SnapShare() {
             <div className="grid w-full min-w-0 grid-cols-2 gap-2 sm:gap-3">
               <div className="relative aspect-square overflow-hidden rounded-xl border border-motif-deep/15 shadow-sm">
                 <Image
-                  src="/mobile-background/couple (8).webp"
+                  src="/gallery-design/box (2).jpg"
                   alt="Wedding moment 1"
                   fill
                   className="object-cover"
@@ -341,7 +341,7 @@ export function SnapShare() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-xl border border-motif-deep/15 shadow-sm">
                 <Image
-                  src="/mobile-background/couple (3).webp"
+                  src="/gallery-design/box (5).jpg"
                   alt="Wedding moment 2"
                   fill
                   className="object-cover"
@@ -350,7 +350,7 @@ export function SnapShare() {
               </div>
               <div className="relative col-span-2 aspect-[3/2] overflow-hidden rounded-xl border border-motif-deep/15 shadow-sm">
                 <Image
-                  src="/desktop-background/couple (2).webp"
+                  src="/desktop-background/couples (5).webp"
                   alt="Wedding moment 3"
                   fill
                   className="object-cover"

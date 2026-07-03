@@ -497,22 +497,22 @@ export function Entourage() {
         className="relative z-10 overflow-hidden pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-12 md:pb-12 lg:pt-14 lg:pb-14"
       >
         {/* Corner decorations */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10">
+        {/* <div className="pointer-events-none absolute left-0 top-0 z-10">
          
           <img
             src="/decoration/deco/top-left-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
-        </div>
-        <div className="pointer-events-none absolute right-0 top-0 z-10">
+        </div> */}
+        {/* <div className="pointer-events-none absolute right-0 top-0 z-10">
           
           <img
             src="/decoration/deco/top-right-corner-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
-        </div>
+        </div> */}
         <div className="pointer-events-none absolute bottom-0 left-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
