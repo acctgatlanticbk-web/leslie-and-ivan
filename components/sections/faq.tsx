@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState, type ReactNode } from "react"
+import { siteConfig as defaultSiteConfig } from "@/content/site"
 import type { SiteConfig } from "@/lib/site-config"
 import { ChevronDown } from "lucide-react"
 import { Cinzel } from "next/font/google"
@@ -48,6 +49,22 @@ const ct = {
 
 const linkClass =
   "underline font-semibold transition-colors hover:opacity-80"
+
+function formatTelHref(phone: string): string {
+  return `tel:${phone.replace(/\s/g, "")}`
+}
+
+function PhoneLink({ phone }: { phone: string }) {
+  return (
+    <a
+      href={formatTelHref(phone)}
+      className={linkClass}
+      style={{ color: palette.accent }}
+    >
+      {phone}
+    </a>
+  )
+}
 
 const cardStyle = {
   background: "var(--color-welcome-bg)",
@@ -121,6 +138,9 @@ function FaqTitle() {
 function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
   const guestArrival = siteConfig.ceremony.guestsTime ?? "30–45 minutes before the ceremony"
   const dressTheme = siteConfig.dressCode.theme
+  const { bridePhone, groomPhone } = defaultSiteConfig.contact
+  const brideName = defaultSiteConfig.couple.bride
+  const groomName = defaultSiteConfig.couple.groom
 
   return [
     {
@@ -129,7 +149,7 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
     },
     {
       question: "What time should I arrive for the ceremony?",
-      answer: `Our ceremony will begin promptly at ${siteConfig.ceremony.time}. We kindly ask guests to arrive by ${guestArrival} to allow enough time for parking, walking to the ceremony area, and finding your seats so we can begin on time.`,
+      answer: `Our ceremony will begin promptly at 2:00 PM. We kindly ask guests to arrive by 1:00 PM to allow enough time for parking, walking to the ceremony area, and finding your seats so we can begin on time.`,
     },
     {
       question: "Where will the ceremony and reception take place?",
@@ -155,8 +175,11 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
           {"\n\n"}
           Please respond by {siteConfig.details.rsvp.deadline.replace(/\.\s*$/, "")}.
           {"\n\n"}
-          If you have questions, please contact our coordinator {siteConfig.details.rsvp.coordinator} at{" "}
-          {siteConfig.details.rsvp.phone}.
+          If you have questions, please contact:
+          {"\n\n"}
+          {brideName} — <PhoneLink phone={bridePhone} />
+          {"\n"}
+          {groomName} — <PhoneLink phone={groomPhone} />
         </>
       ),
     },
@@ -165,21 +188,21 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
       answer:
         "Yes, please. We will be needing your formal RSVP to consolidate guest details and finalize the headcount for catering and seating purposes.",
     },
-    {
-      question: "Can I sit anywhere at the reception?",
-      answer:
-        "Please don't. It took us a lot of effort and discussion to finish the seating arrangement, which is planned for everyone's convenience and preference.",
-    },
+    // {
+    //   question: "Can I sit anywhere at the reception?",
+    //   answer:
+    //     "Please don't. It took us a lot of effort and discussion to finish the seating arrangement, which is planned for everyone's convenience and preference.",
+    // },
     {
       question: 'Can I bring a "Plus One" to the event?',
       answer:
         "As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only.",
     },
-    {
-      question: "Can I bring my child to the event?",
-      answer:
-        'As much as we each adore your little ones, we cannot include children at our ceremony and reception, other than those that are part of the entourage, due to constraints on our venue\'s capacity. We are looking forward to celebrating a Parents\' "Night Out" with you!',
-    },
+    // {
+    //   question: "Can I bring my child to the event?",
+    //   answer:
+    //     'As much as we each adore your little ones, we cannot include children at our ceremony and reception, other than those that are part of the entourage, due to constraints on our venue\'s capacity. We are looking forward to celebrating a Parents\' "Night Out" with you!',
+    // },
     {
       question:
         'I said "No" to the RSVP but I had a change of plans—I can attend now! What should I do?',
@@ -200,11 +223,11 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
       question: "What is the dress code?",
       answer: `${dressTheme}. ${siteConfig.dressCode.note} You can find outfit inspiration and palette details in the Event Details section above.`,
     },
-    {
-      question: "Unplugged Ceremony",
-      answer:
-        "EYES UP, PHONES DOWN, HEARTS OPEN.\n\nThe greatest gift you can give us during our ceremony is your presence. We respectfully request that guests refrain from taking photos or videos during the ceremony so our official photographers can capture every moment without distraction. We promise to share the beautiful photos with you afterward!\n\nOur professional photographers will be capturing every beautiful memory, and we promise to share the photos with everyone afterwards.",
-    },
+    // {
+    //   question: "Unplugged Ceremony",
+    //   answer:
+    //     "EYES UP, PHONES DOWN, HEARTS OPEN.\n\nThe greatest gift you can give us during our ceremony is your presence. We respectfully request that guests refrain from taking photos or videos during the ceremony so our official photographers can capture every moment without distraction. We promise to share the beautiful photos with you afterward!\n\nOur professional photographers will be capturing every beautiful memory, and we promise to share the photos with everyone afterwards.",
+    // },
     {
       question: "Can I take photos or videos during the reception?",
       answer:

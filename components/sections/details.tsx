@@ -150,15 +150,15 @@ const ct = {
 
 const attireGuide = {
   sponsors: {
-    image: "/Details/parentsattire.png",
+    image: "/Details/parentss.png",
     imageAspect: "669/373",
     ladies: {
-      colors: ["#E66318", "#6A250C"] as const,
-      description: "Mother of the Bride : Orange Silk - ( Light crepe ) , Mother of the Groom : Burnt Orange - ( Rustic wool )",
+      colors: ["#E66318"] as const,
+      description: "Orange Silk",
     },
     gentlemen: {
       colors: ["#B7A78F"] as const,
-      description: "Father: Light Brown ( wool Blend )- Autumn Tie",
+      description: "Light Brown - Autumn Tie",
     },
   },
   entourage: {
@@ -166,11 +166,11 @@ const attireGuide = {
     imageAspect: "669/373",
     ladies: {
       colors: ["#ADB79E", "#07361A", "#767D54"] as const,
-      description: "Sage Green - ( Light crepe ), Forest Green - ( velvet ), Moss Green - ( silk )",
+      description: "Sage Green, Forest Green, Moss Green",
     },
     gentlemen: {
       colors: ["#494947"] as const,
-      description: "Charcoal Gray -( wool blend )",
+      description: "Charcoal Gray",
     },
   },
   guests: {
@@ -368,30 +368,41 @@ function EventVenueCard({
         style={cardStyle}
       >
         <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[30rem] overflow-hidden">
-          {images.map((src, index) => {
-            const isActive = index === activeImageIndex
-            return (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-[opacity,transform] duration-[1600ms] ease-[cubic-bezier(0.45,0.05,0.55,0.95)] ${
-                  isActive
-                    ? "opacity-100 scale-100 z-10"
-                    : "opacity-0 scale-[1.06] z-0 pointer-events-none"
-                }`}
-              >
-                <Image
-                  src={src}
-                  alt={locationName}
-                  fill
-                  className={`object-cover transition-transform duration-[9000ms] ease-out ${
-                    isActive ? "scale-[1.08] group-hover:scale-[1.12]" : "scale-100"
+          {images.length === 1 ? (
+            <Image
+              src={images[0]}
+              alt={locationName}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
+              priority
+            />
+          ) : (
+            images.map((src, index) => {
+              const isActive = index === activeImageIndex
+              return (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-[opacity,transform] duration-[1600ms] ease-[cubic-bezier(0.45,0.05,0.55,0.95)] ${
+                    isActive
+                      ? "opacity-100 scale-100 z-10"
+                      : "opacity-0 scale-[1.06] z-0 pointer-events-none"
                   }`}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                  priority={index === 0}
-                />
-              </div>
-            )
-          })}
+                >
+                  <Image
+                    src={src}
+                    alt={locationName}
+                    fill
+                    className={`object-cover transition-transform duration-[9000ms] ease-out ${
+                      isActive ? "scale-[1.08] group-hover:scale-[1.12]" : "scale-100"
+                    }`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    priority={index === 0}
+                  />
+                </div>
+              )
+            })
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-20 pointer-events-none" />
 
           <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 right-3 sm:right-4 md:right-6 z-30">
@@ -571,6 +582,7 @@ export function Details() {
   const dressCodeColors = siteConfig.dressCode.colors.split(",").map((color) => color.trim())
 
   useEffect(() => {
+    if (ceremonyImages.length <= 1) return
     const timer = setInterval(() => {
       setCurrentCeremonyImageIndex((prev) => (prev + 1) % ceremonyImages.length)
     }, 4500)
@@ -578,6 +590,7 @@ export function Details() {
   }, [ceremonyImages.length])
 
   useEffect(() => {
+    if (receptionImages.length <= 1) return
     const timer = setInterval(() => {
       setCurrentReceptionImageIndex((prev) => (prev + 1) % receptionImages.length)
     }, 4500)

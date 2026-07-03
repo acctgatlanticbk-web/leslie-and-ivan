@@ -132,7 +132,7 @@ export function LoveStory() {
         layout="image-left"
         isFirst={true}
         title="The Spark That Started It All"
-        imageSrc="/mobile-background/2018 Feb.JPG"
+        imageSrc="/LoveStory/2018 Feb.JPG"
         text={
           <>
             <p className="mb-4">
@@ -148,7 +148,7 @@ export function LoveStory() {
       <StorySection
         theme="dark"
         layout="image-right"
-        imageSrc="/mobile-background/2019 Jan.webp"
+        imageSrc="/LoveStory/2019 Jan.webp"
         title="From Strangers to Sweethearts"
         text={
           <>
@@ -165,7 +165,7 @@ export function LoveStory() {
       <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/2019 July.webp"
+        imageSrc="/LoveStory/2019 July.webp"
         title="Wanderlust and Warm Hearts"
         text={
           <>
@@ -182,7 +182,7 @@ export function LoveStory() {
       <StorySection
         theme="dark"
         layout="image-right"
-        imageSrc="/mobile-background/2020 Jan.webp"
+        imageSrc="/LoveStory/2020 Jan.webp"
         title="A Bond That Only Grew Deeper"
         text={
           <>
@@ -199,7 +199,7 @@ export function LoveStory() {
       <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/fake proposal 2020.webp"
+        imageSrc="/LoveStory/fake proposal 2020.webp"
         title="A Sweet Glimpse of Forever"
         text={
           <>
@@ -217,7 +217,7 @@ export function LoveStory() {
         theme="dark"
         layout="image-right"
         isLast={true}
-        imageSrc="/mobile-background/2021 Jan.webp"
+        imageSrc="/LoveStory/2021 Jan.webp"
         title="Celebrating Every Beautiful Milestone"
         text={
           <>
@@ -235,7 +235,7 @@ export function LoveStory() {
         theme="light"
         layout="image-left"
         isLast={true}
-        imageSrc="/mobile-background/Alyanna graduation 2021.webp"
+        imageSrc="/LoveStory/Alyanna graduation 2021.webp"
         title="Proud of Every Step, Alyanna"
         text={
           <>
@@ -253,7 +253,7 @@ export function LoveStory() {
         theme="dark"
         layout="image-right"
         isLast={true}
-        imageSrc="/mobile-background/Alyanna roll signing 2022.webp"
+        imageSrc="/LoveStory/Alyanna roll signing 2022.webp"
         title="Another Chapter, Another Dream Realized"
         text={
           <>
@@ -270,7 +270,7 @@ export function LoveStory() {
        <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/2022 Dec.webp"
+        imageSrc="/LoveStory/2022 Dec.webp"
         title="Falling Deeper, One Day at a Time"
         text={
           <>
@@ -287,7 +287,7 @@ export function LoveStory() {
       <StorySection
         theme="dark"
         layout="image-right"
-        imageSrc="/mobile-background/2023 Dec.webp"
+        imageSrc="/LoveStory/2023 Dec.webp"
         title="New Places, Same Sweet Company"
         text={
           <>
@@ -304,7 +304,7 @@ export function LoveStory() {
       <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/2024 Jan.webp"
+        imageSrc="/LoveStory/2024 Jan.webp"
         title="Steady, Strong, and Still Growing"
         text={
           <>
@@ -322,7 +322,7 @@ export function LoveStory() {
         theme="dark"
         layout="image-right"
         isLast={true}
-        imageSrc="/mobile-background/Dean graduation 2024.JPG"
+        imageSrc="/LoveStory/Dean graduation 2024.JPG"
         title="Proud of Every Step, Dean"
         text={
           <>
@@ -340,7 +340,7 @@ export function LoveStory() {
         theme="light"
         layout="image-left"
         isLast={true}
-        imageSrc="/mobile-background/2024 Oct.webp"
+        imageSrc="/LoveStory/2024 Oct.webp"
         title="Cheering Each Other On"
         text={
           <>
@@ -357,7 +357,7 @@ export function LoveStory() {
       <StorySection
         theme="dark"
         layout="image-right"
-        imageSrc="/mobile-background/2025 Jan.webp"
+        imageSrc="/LoveStory/2025 Jan.webp"
         title="A New Year, A Deeper Love"
         text={
           <>
@@ -374,7 +374,7 @@ export function LoveStory() {
       <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/Dean roll signing 2025.webp"
+        imageSrc="/LoveStory/Dean roll signing 2025.webp"
         title="Another Chapter, Another Dream Realized"
         text={
           <>
@@ -392,7 +392,7 @@ export function LoveStory() {
         theme="dark"
         layout="image-right"
         isLast={true}
-        imageSrc="/mobile-background/2025 Oct.png"
+        imageSrc="/LoveStory/2025 Oct.png"
         title="Milestones Made Sweeter Together"
         text={
           <>
@@ -409,7 +409,7 @@ export function LoveStory() {
        <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/2026 Jan.webp"
+        imageSrc="/LoveStory/2026 Jan.webp"
         title="Still Choosing Each Other"
         text={
           <>
@@ -426,7 +426,7 @@ export function LoveStory() {
       <StorySection
         theme="dark"
         layout="image-right"
-        imageSrc="/mobile-background/2026 March.webp"
+        imageSrc="/LoveStory/2026 March.webp"
         title="Together, Always the Better Adventure"
         text={
           <>
@@ -443,7 +443,7 @@ export function LoveStory() {
       <StorySection
         theme="light"
         layout="image-left"
-        imageSrc="/mobile-background/real proposal 2026.webp"
+        imageSrc="/LoveStory/real proposal 2026.webp"
         title="Yes, To Forever"
         text={
           <>

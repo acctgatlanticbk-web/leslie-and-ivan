@@ -42,12 +42,12 @@ export const siteConfig = {
     rsvp: {
       deadline: "November 1, 2026",
       coordinator: "Dean Jay Belwa Balcanao",
-      phone: "+63 965 490 6240",
+      phone: "09154347932",
     },
   },
   contact: {
-    bridePhone: "+63 956 482 5255",
-    groomPhone: "",
+    bridePhone: "09052290015",
+    groomPhone: "09154347932",
     email: "",
   },
   giftRegistry: {
@@ -73,7 +73,7 @@ export const siteConfig = {
     time: "1:00 PM",
     entourageTime: "11:00 AM",
     guestsTime: "11:30 AM",
-    image: ["/Details/ceremony.png", "/Details/ceremony2.jpg", "/Details/ceremony3.png"],
+    image: ["/Details/Chapel of the Mountains Itogon (2).jpg"],
   },
   reception: {
     location: "Montesierra Events Place",
@@ -82,10 +82,10 @@ export const siteConfig = {
     date: "December 7, 2026",
     day: "Monday",
     time: "6:00 PM",
-    image: ["/Details/reception.png", "/Details/reception1.png", "/Details/reception3.png"],
+    image: ["/Details/receptionnew.png"],
   },
   dressCode: {
-      theme: "SEMI-FORMAL",
+      theme: "FORMAL",
     colors: "#BBCED5, #B9C3A8, #F3D8C5, #D1C4D4, #ECD8BA, #F4E8D8, #E1DCCF",
     sponsors: {
       photo: "/Details/sponsors-new.png",
@@ -136,7 +136,8 @@ Now, as they prepare to say yes before God and the people they love most, Cather
     subtitle: "Songs that have been part of our journey together",
     playlistName: "Dean and Alyanna Wedding",
     // Use the normal Spotify share link (Share → Copy link), not the embed URL.
-    spotifyUrl: "https://open.spotify.com/playlist/2wZOUW7A6YLDKOREccGGiP",
+    ///https://open.spotify.com/embed/playlist/11xYpNn0JwafRyKUsNSZyn
+    spotifyUrl: "https://open.spotify.com/playlist/11xYpNn0JwafRyKUsNSZyn",
   },
   snapShare: {
     googleDriveLink:
