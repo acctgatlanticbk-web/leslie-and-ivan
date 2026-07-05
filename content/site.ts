@@ -13,16 +13,16 @@ export const siteConfig = {
     backgroundMusic:"/background_music/Can't Help Falling In Love - Elvis Presley - Violin cover.mp3"
   },
   googleAPI:{
-    messageForm: "https://docs.google.com/forms/d/e/1FAIpQLSeA2Vr4PgwxPNpS7HNbyivgnrRYRw33NV8RU313Ch88ERy4mg/formResponse",   //done
-    message: "https://script.google.com/macros/s/AKfycbwnn9NPmZDxBcwKBpWI41MORUco217BHHdT-SsCZ_v4V6DKh-s1r4k45iCkDkzDtCc5/exec",  //done
-    guestList: "https://script.google.com/macros/s/AKfycbx43JBhDpAHeWt3Z5U75E0ZTHbBfD_-p14llASXDCohtmrUvNMwNtJBapO3uUXxGPkg/exec",  //done
-    guestRequest: "https://script.google.com/macros/s/AKfycbxW0drh2MhTB3PVesj6g96SHGlGGyZlFVF8Vip7j9xxzFjNhiCTLQY0P2wnt4btGEpn/exec",   //done
-    entourage: "https://script.google.com/macros/s/AKfycbwF8KDuS75fYdsDVWF-hlu89bM-lpJ4eOXE5EaZM2ItS4Sh-rNGSCf7GZUBQ7hCvOq_/exec",  //done
-    sponsors: "https://script.google.com/macros/s/AKfycbwsTQ2ZJVXW2R_Zrv7uifVcyKVtONMj9-rFM1Jsfse959CIsLt-5t1faGwTZFjqdnlM/exec",  //done 
-    proposalResponses: "https://script.google.com/macros/s/AKfycbz3A3jOxkirdVVqA-WVneK0yDtz_Pb0emMeuHZlIWKJ_QIz-miPSZ-hpXKiyxd7fm8/exec", // uses entourage script with action: proposal
-    weddingDetails: "https://script.google.com/macros/s/AKfycbxxRTzQFgdn0nsa8Cu1mn9QegioFFv9uSvBstRSZu6m8vOSEU2QnbSs7f-nVIsQSbrT/exec",   //done
+    messageForm: "https://docs.google.com/forms/d/e/1FAIpQLSeThRfCzR4ddPNIVGtoMcQv4UrUw07Iv0uz3NxzkiYL8NHZWA/formResponse",   //done
+    message: "https://script.google.com/macros/s/AKfycbzCF_xtOGSNY1ByqMefTrOQqdgcnYqZJsOsmW_Eij8wEvhxYsv5JzjJVxIX4Nq06To-/exec",  //done
+    guestList: "https://script.google.com/macros/s/AKfycbzBCCNRzOvGCSNkzPq1e2oCjEkEMngD48CCrsk4_j2MsqIfpcmuyys2c8whN1TOO6fc/exec",  //done
+    guestRequest: "https://script.google.com/macros/s/AKfycbx3Fiyw3vzvPYD2QyFukDL_YqTVYi4tFO5KYIMjzGhhA4_Acu8a9LKPdbDWQ0jkx5hb/exec",   //done
+    entourage: "https://script.google.com/macros/s/AKfycbzybNMbxz6ZE9tWgKt3zEVfGloJOtUUqxsHVRXumzHRzcjc9mWoAJsyuTiT5Uxsinul/exec",  //done
+    sponsors: "https://script.google.com/macros/s/AKfycbyKM9e4IEJ5COVX_bkKb0kio0vWPkD6Ce3MnORL2jjBOmeoZf1TFDrLshe9ctjQQAvP/exec",  //done 
+    proposalResponses: "https://script.google.com/macros/s/AKfycby1w78Vucpzu5QNDPLSdFOaVTQswfP7EaJ0t1KfnCaNcGj9mgqAs06v2dcOy2Jy_h79/exec", // uses entourage script with action: proposal
+    weddingDetails: "https://script.google.com/macros/s/AKfycbzES2T8Fhf2m7JZK7Bu9WXBUWb6nU8yFKIq-jaMH1RIa5wgvgIxhuauJjmMQhfaUL4/exec",   //done
 ////google share 
-    googleShare: "https://docs.google.com/spreadsheets/d/1G304je_b5PvxzIVO7YsOEuiiJ_JvGDWgHbkuAzgQNkA/edit?usp=sharing", 
+    googleShare: "https://docs.google.com/spreadsheets/d/1mUXo2_vmCRANuK4kOpQWbYktVLKWDJE4TRPB9zZdES8/edit?usp=sharing", 
   },
   wedding: {
     date: "August 30, 2026",
@@ -147,7 +147,7 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   },
   snapShare: {
     googleDriveLink:
-      "https://drive.google.com/drive/folders/1pRdDqtIDwRLisfyeQblnGGyEVac1jUwA?usp=sharing",
+      "https://drive.google.com/drive/folders/1vNLDvT37WA0CR9u7NusFqllMflX9KVLU?usp=sharing",
     albumQR: "/QR/AlbumQR.png",
     hashtag: ["#LeslieAndIvanTieTheKnot"],
     instructions: "Please scan this QR Code and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
