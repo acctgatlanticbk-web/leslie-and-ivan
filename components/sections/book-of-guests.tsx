@@ -330,14 +330,14 @@ export function BookOfGuests() {
       {/* Corner decorations */}
       {/* <div className="pointer-events-none absolute left-0 top-0 z-10">
         <img
-          src="/decoration/deco/top-left-corner-deco.png"
+          src="/decoration/left-top-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
-      </div> */}
-      {/* <div className="pointer-events-none absolute right-0 top-0 z-10">
+      </div>
+      <div className="pointer-events-none absolute right-0 top-0 z-10">
         <img
-          src="/decoration/deco/top-right-corner-deco.png"
+          src="/decoration/right-top-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
@@ -345,7 +345,7 @@ export function BookOfGuests() {
       <div className="pointer-events-none absolute bottom-0 left-0 z-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/decoration/deco/bottom-left-corner-deco.png"
+          src="/decoration/left-bottom-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
@@ -353,7 +353,7 @@ export function BookOfGuests() {
       <div className="pointer-events-none absolute bottom-0 right-0 z-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/decoration/deco/bottom-right-corner-deco.png"
+          src="/decoration/right-bottom-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />

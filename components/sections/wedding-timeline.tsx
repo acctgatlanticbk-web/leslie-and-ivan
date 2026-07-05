@@ -122,21 +122,21 @@ function buildTimelineEvents(siteConfig: SiteConfig): TimelineEvent[] {
     //   imageSrc: "/weddingtimeline/assemble.png",
     // },
     {
-      time: "1:00 PM",
+      time: "2:00 PM",
       title: "Guests Arrival",
       location: siteConfig.ceremony.location,
       icon: GuestsIcon,
       imageSrc: "/weddingtimeline/arrivalimage.png",
     },
     {
-      time: "2:00 PM",
+      time: "3:00 PM",
       title: "Ceremony",
       location: siteConfig.ceremony.location,
       icon: RingsIcon,
       imageSrc: "/weddingtimeline/WeddingCeremony.png",
     }, 
     {
-      time: "3:00 PM",
+      time: "4:00 PM",
       title: "Photos",
       location: siteConfig.ceremony.location,
       icon: RingsIcon,
@@ -144,7 +144,7 @@ function buildTimelineEvents(siteConfig: SiteConfig): TimelineEvent[] {
     },
 
     {
-      time: "4:00 PM",
+      time: "5:00 PM",
       title: "Cocktail Hour",
       location: receptionVenue,
       icon: CocktailIcon,

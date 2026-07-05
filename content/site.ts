@@ -5,12 +5,12 @@ import {
 
 export const siteConfig = {
   couple: {
-    bride: "Alyanna Dyan Gallardo Manzano", //Alyanna Dyan Gallardo Manzano
-    brideNickname: "Alyanna", //Ltryl
-    groom: "Dean Jay Belwa Balcanao", //Ltryl B. Benitez
-    groomNickname: "Dean",
-    monogram:"/monogram/new-monogram.png" ,//Ltryl
-    backgroundMusic:"/background_music/The Only One.mp3"
+    bride: "Leslie Mae F. Esteba", //Alyanna Dyan Gallardo Manzano
+    brideNickname: "Leslie", //Ltryl
+    groom: "Geofrey Ivan C. Dimaunahan", //Ltryl B. Benitez
+    groomNickname: "Ivan",
+    monogram:"/monogram/monogram.png" ,//Ltryl
+    backgroundMusic:"/background_music/Can't Help Falling In Love - Elvis Presley - Violin cover.mp3"
   },
   googleAPI:{
     messageForm: "https://docs.google.com/forms/d/e/1FAIpQLSeA2Vr4PgwxPNpS7HNbyivgnrRYRw33NV8RU313Ch88ERy4mg/formResponse",   //done
@@ -25,8 +25,8 @@ export const siteConfig = {
     googleShare: "https://docs.google.com/spreadsheets/d/1G304je_b5PvxzIVO7YsOEuiiJ_JvGDWgHbkuAzgQNkA/edit?usp=sharing", 
   },
   wedding: {
-    date: "December 7, 2026",
-    time: "2:00 PM",
+    date: "August 30, 2026",
+    time: "3:00 PM",
     venue: "Chapel of the Mountains, Itogon Mountain Village",
     tagline: "are getting married!",
     theme: "Our wedding palette is inspired by timeless elegance and warmth.Motif Colors: Champagne Gold, Soft Beige, Warm Soft Brown",
@@ -40,14 +40,14 @@ export const siteConfig = {
   },
   details: {
     rsvp: {
-      deadline: "November 1, 2026",
-      coordinator: "Dean Jay Belwa Balcanao",
-      phone: "09154347932",
+      deadline: "August 15, 2026",
+      coordinator: "to be updated",
+      phone: "to be updated",
     },
   },
   contact: {
-    bridePhone: "09052290015",
-    groomPhone: "09154347932",
+    bridePhone: "to be updated",
+    groomPhone: "to be updated",
     email: "",
   },
   giftRegistry: {
@@ -71,24 +71,24 @@ export const siteConfig = {
     }
   },
   ceremony: {
-    location: "Chapel of the Mountains, Itogon Mountain Village",
-    venue: "Brgy Loacan, Ambuklao Road, Benguet - Nueva Vizcaya Rd, La Trinidad, Benguet",
-    map: "https://maps.app.goo.gl/i5MoJL8H9zTG2Jyq5",
-    date: "December 7, 2026",
-    day: "Monday",
-    time: "2:00 PM",
-    entourageTime: "11:00 AM",
-    guestsTime: "11:30 AM",
-    image: ["/Details/Chapel of the Mountains Itogon (2).jpg"],
+    location: "Invencion De la Sta. Cruz Parish",
+    venue: "Poblacion , Alitagtag, Philippines, 4205",
+    map: "https://maps.app.goo.gl/pm1bFsHN2ov6xWg29",
+    date: "August 30, 2026",
+    day: "Sunday",
+    time: "3:00 PM",
+    entourageTime: "2:00 PM",
+    guestsTime: "2:30 PM",
+    image: ["/Details/ceremony.png","/Details/ceremony2.png"],
   },
   reception: {
-    location: "Montesierra Events Place",
-    venue: "733 Ambuklao Rd, Itogon, 2604 Benguet",
-    map: "https://maps.app.goo.gl/NAFDLFFgvHYeNiVY9",
-    date: "December 7, 2026",
-    day: "Monday",
+    location: "Paña Events Place",
+    venue: "Muzon Primero, Alitagtag, Philippines, 4205",
+    map: "https://maps.app.goo.gl/6weMvEPz172jX27E6",
+    date: "August 30, 2026",
+    day: "Sunday",
     time: "6:00 PM",
-    image: ["/Details/receptionnew.png"],
+    image: ["/Details/reception.png","/Details/reception2.png"],
   },
   dressCode: {
       theme: "FORMAL",
@@ -140,21 +140,21 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   playlist: {
     title: "A Playlist from our hearts",
     subtitle: "Songs that have been part of our journey together",
-    playlistName: "Dean and Alyanna Wedding",
+    playlistName: "Leslie and Ivan Wedding",
     // Use the normal Spotify share link (Share → Copy link), not the embed URL.
     ///https://open.spotify.com/embed/playlist/11xYpNn0JwafRyKUsNSZyn
-    spotifyUrl: "https://open.spotify.com/playlist/11xYpNn0JwafRyKUsNSZyn",
+    spotifyUrl: "https://open.spotify.com/playlist/1dporf4sqdQakOTO0lJuhf",
   },
   snapShare: {
     googleDriveLink:
       "https://drive.google.com/drive/folders/1pRdDqtIDwRLisfyeQblnGGyEVac1jUwA?usp=sharing",
     albumQR: "/QR/AlbumQR.png",
-    hashtag: ["#DeanAndAlyannaTieTheKnot"],
+    hashtag: ["#LeslieAndIvanTieTheKnot"],
     instructions: "Please scan this QR Code and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
   accommodation: {
     coordinator: {
-      name: "Gayle Kathleen Asoy Gable",
+      name: "Janine Joy Batista",
       phone: "0909 912 3844",
     },
     hotels: [

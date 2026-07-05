@@ -65,7 +65,7 @@ const cardStyle = {
     "0 8px 28px color-mix(in srgb, var(--color-motif-deep) 7%, transparent), inset 0 1px 0 color-mix(in srgb, white 70%, transparent)",
 } as const
 
-const QR_FG = "#E66318"
+const QR_FG = "#5E6D5A"
 
 function OutsideDivider() {
   return (
@@ -322,7 +322,7 @@ export function SnapShare() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 items-start gap-5 sm:mt-8 sm:gap-6 lg:grid-cols-2 lg:gap-8 md:mt-10">
-          <ContentCard className="lg:order-1">
+          {/* <ContentCard className="lg:order-1">
             <h4
               className={`${cinzel.className} ${ct.cardTitle} text-center font-semibold uppercase tracking-[0.08em]`}
               style={{ color: palette.heading }}
@@ -363,7 +363,7 @@ export function SnapShare() {
             >
               Share your snapshots to be featured in our keepsake gallery.
             </p>
-          </ContentCard>
+          </ContentCard> */}
 
           <div className="w-full min-w-0 space-y-5 sm:space-y-6 lg:order-2">
             <ContentCard>

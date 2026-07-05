@@ -223,16 +223,16 @@ function getFaqItems(siteConfig: SiteConfig): FAQItem[] {
       question: "What is the dress code?",
       answer: `${dressTheme}. ${siteConfig.dressCode.note} You can find outfit inspiration and palette details in the Event Details section above.`,
     },
-    // {
-    //   question: "Unplugged Ceremony",
-    //   answer:
-    //     "EYES UP, PHONES DOWN, HEARTS OPEN.\n\nThe greatest gift you can give us during our ceremony is your presence. We respectfully request that guests refrain from taking photos or videos during the ceremony so our official photographers can capture every moment without distraction. We promise to share the beautiful photos with you afterward!\n\nOur professional photographers will be capturing every beautiful memory, and we promise to share the photos with everyone afterwards.",
-    // },
-    // {
-    //   question: "Can I take photos or videos during the reception?",
-    //   answer:
-    //     "Yes! While our I DO's will be unplugged, our reception will not be. As a couple who loves photos and memories, we would love for you to capture the fun moments throughout the evening. We prepared this celebration wholeheartedly and we want everyone to enjoy it fully.",
-    // },
+    {
+      question: "Unplugged Ceremony",
+      answer:
+        "EYES UP, PHONES DOWN, HEARTS OPEN.\n\nThe greatest gift you can give us during our ceremony is your presence. We respectfully request that guests refrain from taking photos or videos during the ceremony so our official photographers can capture every moment without distraction. We promise to share the beautiful photos with you afterward!\n\nOur professional photographers will be capturing every beautiful memory, and we promise to share the photos with everyone afterwards.",
+    },
+    {
+      question: "Can I take photos or videos during the reception?",
+      answer:
+        "Yes! While our I DO's will be unplugged, our reception will not be. As a couple who loves photos and memories, we would love for you to capture the fun moments throughout the evening. We prepared this celebration wholeheartedly and we want everyone to enjoy it fully.",
+    },
     {
       question: "When is the appropriate time to leave?",
       answer:
@@ -291,35 +291,35 @@ export function FAQ() {
       {/* <div className="pointer-events-none absolute left-0 top-0 z-10">
 
         <img
-          src="/decoration/deco/top-left-corner-deco.png"
-          alt=""
-          className={CORNER_DECO_CLASS}
-        />
-      </div> */}
-      <div className="pointer-events-none absolute right-0 top-0 z-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/decoration/deco/top-right-corner-deco.png"
+          src="/decoration/left-top-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
       </div>
+      <div className="pointer-events-none absolute right-0 top-0 z-10">
+
+        <img
+          src="/decoration/right-top-deco.png"
+          alt=""
+          className={CORNER_DECO_CLASS}
+        />
+      </div> */}
       <div className="pointer-events-none absolute bottom-0 left-0 z-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/decoration/deco/bottom-left-corner-deco.png"
+          src="/decoration/left-bottom-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
       </div>
-      {/* <div className="pointer-events-none absolute bottom-0 right-0 z-10">
+      <div className="pointer-events-none absolute bottom-0 right-0 z-10">
 
         <img
-          src="/decoration/deco/bottom-right-corner-deco.png"
+          src="/decoration/right-bottom-deco.png"
           alt=""
           className={CORNER_DECO_CLASS}
         />
-      </div> */}
+      </div>
 
       {/* Header */}
       <div className="relative z-20 px-6 text-center sm:px-10 md:px-12">

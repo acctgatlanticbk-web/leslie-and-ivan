@@ -61,7 +61,7 @@ const softPanelStyle = {
   backgroundColor: "var(--color-welcome-bg-soft)",
 } as const
 
-const QR_FG = "#E53A0A"
+const QR_FG = "#5E6D5A"
 const QR_BG = "#FAF7F2"
 
 function SectionIconDivider({ icon }: { icon: React.ReactNode }) {
@@ -150,15 +150,15 @@ const ct = {
 
 const attireGuide = {
   sponsors: {
-    image: "/Details/parentss.png",
+    image: "/Details/guest.png",
     imageAspect: "669/373",
     ladies: {
-      colors: ["#E66318"] as const,
-      description: "Orange",
+      colors: ["#7C8D69","#A8B4A3","#F4ECE6","#D1B581","#3F4B3E"] as const,
+      description: "Semi-Formal : Sage Green, Olive, Eucalyptus, Ivory, Champagne or Gold",
     },
     gentlemen: {
-      colors: ["#B7A78F"] as const,
-      description: "Light Brown - Autumn Tie",
+      colors: ["#7C8D69","#A8B4A3","#F4ECE6","#D1B581","#3F4B3E"] as const,
+      description: "Semi-Formal : Long Sleeves Sage Green, Olive, or Champagne",
     },
   },
   entourage: {
@@ -664,7 +664,7 @@ export function Details() {
         <div className="pointer-events-none absolute left-0 top-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/top-left-corner-deco.png"
+            src="/decoration/left-top-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -672,7 +672,7 @@ export function Details() {
         <div className="pointer-events-none absolute right-0 top-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/top-right-corner-deco.png"
+            src="/decoration/right-top-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -680,7 +680,7 @@ export function Details() {
         <div className="pointer-events-none absolute bottom-0 left-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/bottom-left-corner-deco.png"
+            src="/decoration/left-bottom-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -688,7 +688,7 @@ export function Details() {
         <div className="pointer-events-none absolute bottom-0 right-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/bottom-right-corner-deco.png"
+            src="/decoration/right-bottom-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -795,30 +795,30 @@ export function Details() {
         {/* Attire cards — Sponsors, Entourage & Guests */}
         <div className="mb-6 grid grid-cols-1 items-start gap-6 sm:mb-8 sm:gap-8 md:mb-10 lg:grid-cols-3">
           <AttireCard
-            title="The Parents"
+            title="Guest"
             image={attireGuide.sponsors.image}
             imageAspect={attireGuide.sponsors.imageAspect}
             alt="Principal sponsor attire guide"
           >
             <div className="grid grid-cols-1 gap-5 sm:gap-6">
               <AttirePaletteGroup
-                label="Mother of Bride & Groom"
+                label="Ladies"
                 colors={attireGuide.sponsors.ladies.colors}
                 description={attireGuide.sponsors.ladies.description}
               />
               <AttirePaletteGroup
-                label="Father of Bride & Groom"
+                label="Gentlemen"
                 colors={attireGuide.sponsors.gentlemen.colors}
                 description={attireGuide.sponsors.gentlemen.description}
               />
             </div>
           </AttireCard>
 
-          <AttireCard
-            title="The Bridal Party"
+          {/* <AttireCard
+            title="Guest"
             image={attireGuide.entourage.image}
             imageAspect={attireGuide.entourage.imageAspect}
-            alt="Entourage attire guide"
+            alt="Guest attire guide"
           >
             <div className="grid grid-cols-1 gap-5 sm:gap-6">
               <AttirePaletteGroup
@@ -832,9 +832,9 @@ export function Details() {
                 description={attireGuide.entourage.gentlemen.description}
               />
             </div>
-          </AttireCard>
+          </AttireCard> */}
 
-          <AttireCard
+          {/* <AttireCard
             title="Principal Sponsors"
             image={attireGuide.guests.image}
             imageAspect={attireGuide.guests.imageAspect}
@@ -852,8 +852,8 @@ export function Details() {
                 description={attireGuide.guests.gentlemen.description}
               />
             </div>
-          </AttireCard>
-          <AttireCard
+          </AttireCard> */}
+          {/* <AttireCard
             title="Guests"
             image={attireGuide.guests2.image}
             imageAspect={attireGuide.guests2.imageAspect}
@@ -871,7 +871,7 @@ export function Details() {
                 description={attireGuide.guests2.gentlemen.description}
               />
             </div>
-          </AttireCard>
+          </AttireCard> */}
         </div>
 
         {/* <div

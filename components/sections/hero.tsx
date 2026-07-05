@@ -1,25 +1,11 @@
 "use client"
 
-import { useEffect, useState, useMemo, type CSSProperties } from "react"
+import { useMemo, type CSSProperties } from "react"
 import { motion } from "motion/react"
 import { Cinzel } from "next/font/google"
 import localFont from "next/font/local"
 import { useSiteConfig } from "@/hooks/use-site-config"
 import { parseWeddingDate } from "@/lib/wedding-date"
-import Image from "next/image"
-
-const desktopBackgroundSrcs: readonly string[] = [
-  '/desktop-background/couples (1).webp',
-  '/desktop-background/couples (2).webp',
-  '/desktop-background/couples (3).webp',
-  '/desktop-background/couples (4).webp',
-  '/desktop-background/couples (5).webp',
-  '/desktop-background/couples (6).webp',
-]
-
-const mobileBackgroundSrcs: readonly string[] = [
-'/mobile-background/couples (6).webp',
-]
 
 const SHOW_BUTTERFLIES = false
 
@@ -105,70 +91,6 @@ function HeroCoupleLabel({ groom, bride }: { groom: string; bride: string }) {
 
 export function Hero() {
   const siteConfig = useSiteConfig()
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [imagesLoaded, setImagesLoaded] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-
-  // Detect screen size and update isMobile state
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768) // md breakpoint
-    }
-    
-    // Check on mount
-    checkScreenSize()
-    
-    // Listen for resize events
-    window.addEventListener('resize', checkScreenSize)
-    
-    return () => window.removeEventListener('resize', checkScreenSize)
-  }, [])
-
-  const backgroundImages = useMemo(
-    () => (isMobile ? [...mobileBackgroundSrcs] : [...desktopBackgroundSrcs]),
-    [isMobile],
-  )
-
-  // Preload images progressively - show first image immediately
-  useEffect(() => {
-    setImagesLoaded(false)
-    setCurrentImageIndex(0)
-    
-    const firstSrc = backgroundImages[0]
-    if (!firstSrc) return
-
-    const firstImg = document.createElement("img")
-    firstImg.src = firstSrc
-    firstImg.onload = () => setImagesLoaded(true)
-
-    const t = setTimeout(() => {
-      if (typeof navigator !== "undefined" && (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return
-      backgroundImages.slice(1, 3).forEach((src) => {
-        const img = document.createElement("img")
-        img.decoding = "async"
-        img.loading = "lazy"
-        img.src = src
-      })
-    }, 200)
-
-    return () => clearTimeout(t)
-  }, [backgroundImages])
-
-  useEffect(() => {
-    if (!imagesLoaded) return
-    
-    const imageTimer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length)
-    }, 5000)
-    return () => clearInterval(imageTimer)
-  }, [imagesLoaded, backgroundImages])
-
-  useEffect(() => {
-    if (imagesLoaded) {
-      setIsVisible(true)
-    }
-  }, [imagesLoaded])
 
   const groomName = siteConfig.couple.groomNickname || siteConfig.couple.groom
   const brideName = siteConfig.couple.brideNickname || siteConfig.couple.bride
@@ -188,35 +110,8 @@ export function Hero() {
   return (
     <section
       id="home"
-      className={`${theSeasons.variable} ${aboveTheBeyond.variable} relative min-h-screen flex items-center justify-center overflow-hidden bg-motif-deep`}
+      className={`${theSeasons.variable} ${aboveTheBeyond.variable} relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent`}
     >
-      <div className="absolute inset-0 w-full h-full">
-        {imagesLoaded &&
-          backgroundImages.map((src, index) => (
-            <div
-              key={src}
-              className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ willChange: "opacity" }}
-            >
-              <Image
-                src={src}
-                alt=""
-                fill
-                className="object-cover object-center"
-                sizes="100vw"
-                priority={index === 0}
-                quality={85}
-              />
-            </div>
-          ))}
-        {/* Linear gradient overlays — improve text readability across the hero */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/50 to-black/55 z-0" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-0" />
-        <div className="absolute inset-x-0 top-0 h-52 bg-gradient-to-b from-black/50 to-transparent z-0" />
-      </div>
-
       {SHOW_BUTTERFLIES && (
         <>
           {/* Realistic Butterflies flying in lower part near flowers */}
@@ -535,11 +430,7 @@ export function Hero() {
       )}
 
       <div className="relative z-10 w-full container mx-auto px-5 sm:px-8 md:px-12 lg:px-16 flex flex-col items-center justify-center min-h-screen pt-14 sm:pt-16 pb-12 sm:pb-16">
-        <div
-          className={`w-full max-w-4xl flex flex-col items-center gap-3 sm:gap-4 md:gap-5 transition-all duration-1000 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="w-full max-w-4xl flex flex-col items-center gap-3 sm:gap-4 md:gap-5">
           <div className="w-full space-y-1.5 sm:space-y-2 -mt-1 sm:-mt-2">
             <HeroDivider />
 

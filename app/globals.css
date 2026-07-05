@@ -138,34 +138,38 @@
   
   /* ─── Autumn Garden Wedding Palette ───────────────────── */
   
-  /* Background (used by most containers) */
-  --color-motif-cream:   #F8F4EC; /* Ivory */
-  
-  /* Primary Highlight */
-  --color-motif-yellow:  #E9D7A6; /* Champagne */
-  
-  /* Secondary */
-  --color-motif-soft:    #DDB79C; /* Blush */
-  --color-motif-accent:  #E53A0A; /* Dusty Rose */
-  
-  /* Primary Brand */
-  --color-motif-deep:    #9D6D29; /* Mocha */
-  --color-motif-medium:  #A4B18A; /* Sage */
-  
-  /* Neutral */
-  --color-motif-silver:  #FDFBF8; /* Soft Ivory White */
-  
-  /* Welcome section */
-  --color-welcome-bg:        color-mix(in srgb, var(--color-motif-cream) 45%, white);
-  --color-welcome-bg-soft:   color-mix(in srgb, var(--color-motif-cream) 25%, white);
-  
-  --color-welcome-text:      #4A433D;
-  --color-welcome-text-soft: #6C655F;
-  
-  --color-welcome-heading:   #806046; /* Mocha */
-  --color-welcome-script:    #B88A7E; /* Dusty Rose */
-  --color-welcome-navy:      #9D6D29; /* Deep Mocha */
-  --color-welcome-green:     #7D8B69; /* Dark Sage */
+/* Background (used by most containers) */
+--color-motif-cream:   #F7FAF6; /* Mist White with Sage Tint */
+
+/* Primary Highlight */
+--color-motif-yellow:  #CDB47B; /* Soft Antique Gold */
+
+/* Secondary */
+--color-motif-soft:    #E6EFE7; /* Pale Sage */
+--color-motif-accent:  #A8B89E; /* Muted Sage */
+
+/* Primary Brand */
+--color-motif-deep:    #5E6D5A; /* Deep Olive Green */
+--color-motif-medium:  #8FA58A; /* Classic Sage */
+
+/* Neutral */
+--color-motif-silver:  #FFFFFF; /* Pure White */
+
+
+/* ==========================
+   Welcome Section
+   ========================== */
+
+--color-welcome-bg:        color-mix(in srgb, var(--color-motif-cream) 65%, white);
+--color-welcome-bg-soft:   color-mix(in srgb, var(--color-motif-cream) 35%, white);
+
+--color-welcome-text:      #50584F;
+--color-welcome-text-soft: #7A8477;
+
+--color-welcome-heading:   #5E6D5A; /* Deep Olive */
+--color-welcome-script:    #8FA58A; /* Sage */
+--color-welcome-navy:      #5E6D5A; /* Olive instead of Navy */
+--color-welcome-green:     #768A72; /* Dark Sage */
   /* ─────────────────────────────────────────────────────────── */
   --font-imperial-script: "Imperial Script", cursive;
   --font-beautiful-malera: "Beautiful Malera", cursive;
