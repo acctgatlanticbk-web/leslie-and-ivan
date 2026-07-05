@@ -516,7 +516,7 @@ export function Entourage() {
         <div className="pointer-events-none absolute bottom-0 left-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/bottom-left-corner-deco.png"
+            src="/decoration/left-bottom-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -524,7 +524,7 @@ export function Entourage() {
         <div className="pointer-events-none absolute bottom-0 right-0 z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/decoration/deco/bottom-right-corner-deco.png"
+            src="/decoration/right-bottom-deco.png"
             alt=""
             className={CORNER_DECO_CLASS}
           />
@@ -868,7 +868,7 @@ export function Entourage() {
                       )}
 
                       {hasBestManOrMaid && (
-                        <TwoColumnLayout leftTitle="Best Men" rightTitle="Matron of Honor">
+                        <TwoColumnLayout leftTitle="Best Men" rightTitle="Maid of Honor">
                           {(() => {
                             const maxLen = Math.max(bestMan.length, maidOfHonor.length)
                             const rows = []

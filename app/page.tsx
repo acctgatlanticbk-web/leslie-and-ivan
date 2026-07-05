@@ -100,7 +100,7 @@ export default function Home() {
               {/* <Accommodation /> */}
               {/* <GuestInformation /> */}
               <WeddingTimeline />
-              {/* <Entourage /> */}
+              <Entourage />
               <GuestList />
               <BookOfGuests />
       
