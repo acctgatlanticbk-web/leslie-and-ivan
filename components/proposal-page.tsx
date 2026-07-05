@@ -536,7 +536,7 @@ function ProposalAskSection({
               style={{ shapeOutside: "margin-box" }}
             >
               <Image
-                src="/Details/ourguest.png"
+                src="/Details/guestnew.png"
                 alt=""
                 fill
                 className="object-contain object-bottom drop-shadow-[0_20px_48px_rgba(42,37,32,0.12)]"
