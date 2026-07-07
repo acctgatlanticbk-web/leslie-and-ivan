@@ -146,11 +146,11 @@
 
 /* Secondary */
 --color-motif-soft:    #E6EFE7; /* Pale Sage */
---color-motif-accent:  #A8B89E; /* Muted Sage */
+--color-motif-accent:  #5E6D5A; /* below the header */
 
 /* Primary Brand */
---color-motif-deep:    #5E6D5A; /* Deep Olive Green */
---color-motif-medium:  #8FA58A; /* Classic Sage */
+--color-motif-deep:    #5E6D5A; /* Nav Bar*/
+--color-motif-medium:  #8FA58A; /* nav border */
 
 /* Neutral */
 --color-motif-silver:  #FFFFFF; /* Pure White */
@@ -163,13 +163,13 @@
 --color-welcome-bg:        color-mix(in srgb, var(--color-motif-cream) 65%, white);
 --color-welcome-bg-soft:   color-mix(in srgb, var(--color-motif-cream) 35%, white);
 
---color-welcome-text:      #50584F;
+--color-welcome-text:      #3F4B3E; /*  all text */
 --color-welcome-text-soft: #7A8477;
 
---color-welcome-heading:   #5E6D5A; /* Deep Olive */
+--color-welcome-heading:   #5E6D5A; /* some text */
 --color-welcome-script:    #8FA58A; /* Sage */
---color-welcome-navy:      #5E6D5A; /* Olive instead of Navy */
---color-welcome-green:     #768A72; /* Dark Sage */
+--color-welcome-navy:      #3F4B3E; /* HEADER*/
+--color-welcome-green:     #3F4B3E; /* Dark Sage */
   /* ─────────────────────────────────────────────────────────── */
   --font-imperial-script: "Imperial Script", cursive;
   --font-beautiful-malera: "Beautiful Malera", cursive;
